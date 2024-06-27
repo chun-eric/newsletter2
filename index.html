@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html
-  lang="en"
-  xmlns="https://www.w3.org/1999/xhtml"
-  xmlns:o="urn:schemas-microsoft-com:office:office"
->
-  <!-- defined XML and Office Open XML namespaces need for Outlook on Windows -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
   <head>
+    <title>8 Bits</title>
     <meta charset="utf-8" />
     <!-- Unicode character encoding for email, covers most characters for most languagues. -->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -25,9 +21,19 @@
       name="format-detection"
       content="telephone=no, date=no, address=no, email=no, url=no"
     />
-
-    <title></title>
-    <!-- best to leave empty -->
+    <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+        body,
+        div,
+        table,
+        td,
+        span,
+        a,
+        p {
+          font-family: Arial, Helvetica, sans-serif !important;
+        }
+      </style>
+    <![endif]-->
 
     <!--[if mso]>
       <style type="text/css">
@@ -45,7 +51,6 @@
           margin: 0 !important;
         }
       </style>
-
       <noscript>
         <xml>
           <o:OfficeDocumentSettings>
@@ -83,52 +88,53 @@
     <style type="text/css">
       @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 
+      /* CLIENT SPECIFIC STYLES */
+      body,
       table,
       td,
-      div,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
       h1,
+      h2,
+      h3 {
+        font-family: "Caprasimo", cursive, san-serif;
+      }
       p {
-        font-family: "Lato", Arial, sans-serif;
+        font-family: "Roboto", Arial, sans-serif;
       }
       table,
       td {
-        padding: 0;
-        margin: 0;
-        line-height: 0;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        cellpadding: 0 !important;
       }
-
-      body,
-      html {
-        padding: 0;
-        margin: 0;
-        background-color: #ffffff;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-family: "Playfair Display", serif;
-        color: #000000;
-      }
-
-      table {
-        border-spacing: 0;
-      }
-
-      td {
-        padding: 0;
-      }
-
       img {
-        border: 0;
         -ms-interpolation-mode: bicubic;
       }
 
-      span .email {
-        color: #000000 !important;
-        text-decoration: none !important;
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
       }
 
-      a[x-apple-data-detectors],
-      u + #body a,
-      #MessageViewBody a {
+      /* IOS BLUE LINKS */
+      a[x-apple-data-detectors] {
         color: inherit !important;
         text-decoration: none !important;
         font-size: inherit !important;
@@ -137,13 +143,14 @@
         line-height: inherit !important;
       }
 
-      a {
+      /* GMAIL BLUE LINKS */
+      u + #body a {
+        color: inherit;
         text-decoration: none;
-        color: #37cbbf;
-      }
-      :root {
-        color-scheme: light dark;
-        supported-color-schemes: light dark;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
 
       /* Dark Mode media queries to target Apple and iOS*/
@@ -204,19 +211,6 @@
           border: none !important;
         }
 
-        [data-ogsc] .line {
-          color: #f7f8f9 !important;
-        }
-
-        [data-ogsb] .line {
-          color: #f7f8f9 !important;
-        }
-
-        .spacer {
-          color: #000000 !important;
-          background: #333 !important;
-        }
-
         /* Custom Dark Mode Font Colors */
         h1,
         h2,
@@ -232,21 +226,6 @@
           /* background: #4e4e4e !important; */
         }
 
-        hr {
-          border: 1px solid #ffffff !important;
-        }
-
-        .line {
-          color: #f7f8f9 !important;
-          background: #f7f8f9 !important;
-        }
-
-        .horizontal-line {
-          color: #f7f8f9 !important;
-          background: #f7f8f9 !important;
-          height: auto !important;
-        }
-
         .icons {
           filter: brightness(0) invert(1);
         }
@@ -258,2098 +237,1926 @@
         img[class="icons-background"] {
           background: transparent !important;
         }
-
-        .email {
-          color: #ffffff !important;
-          text-decoration: none !important;
-        }
-
-        .darkmode-transparent {
-          background-color: transparent !important;
-        }
-        .column {
-          border: 1px solid #ffffff !important;
-        }
       }
 
-      @media (max-width: 350px) {
-        .three-col .column {
-          max-width: 92% !important;
+      @media only screen and (max-width: 600px) {
+        .responsive-table {
+          width: 95% !important;
         }
 
-        h1 {
-          font-size: 28px !important;
+        .image {
+          width: 100% !important;
+          height: auto !important;
         }
 
-        .line {
-          margin-left: 3px !important;
-          margin-right: 3px !important;
+        .mobile-title {
+          font-size: 30px !important;
         }
 
-        .horizontal-line {
-          margin-left: 3px !important;
-          margin-right: 3px !important;
-        }
-
-        .two-col .column {
-          max-width: 90% !important;
-          margin-bottom: 20px !important;
-          margin: auto !important;
-          margin-left: 5px !important;
-          margin-right: 5px !important;
-          margin-top: 10px !important;
-        }
-        .heading {
+        .db {
           display: block !important;
-          text-align: left !important;
-          padding-left: 20px !important;
-          padding-bottom: 0px !important;
-        }
-        .heading-title {
-          font-size: 26px !important;
         }
 
-        .responsive-image {
-          width: 98% !important;
+        .dw {
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
         }
-
-        .icon-image {
-          width: 30% !important;
+        .mobile-links-image {
+          width: 28px !important;
+          height: 28px !important;
         }
         .featured-nft-heading {
-          padding-left: 15px !important;
-          display: block !important;
+          font-size: 22px !important;
         }
-        .featured-padding {
-          padding-left: 10px !important;
-          padding-right: 10px !important;
-        }
-        .featured-nft-title {
-          padding-left: 5px !important;
-          display: block !important;
-          width: 100% !important;
-        }
-      }
-
-      @media (min-width: 350px) and (max-width: 460px) {
-        .three-col .column {
-          max-width: 100% !important;
-        }
-        .two-col .column {
-          max-width: 100% !important;
-          padding-bottom: 20px !important;
-          margin: auto !important;
-          margin-left: 5px !important;
-          margin-right: 5px !important;
-          margin-top: 10px !important;
-          margin-bottom: 20px !important;
-        }
-
-        h1 {
-          font-size: 32px !important;
-        }
-
-        .line {
-          margin-left: 3px !important;
-          margin-right: 3px !important;
-        }
-
-        .horizontal-line {
-          margin-left: 3px !important;
-          margin-right: 3px !important;
-        }
-
-        .two-col .column img {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        .heading {
-          display: block !important;
-          text-align: left !important;
-          padding-left: 20px !important;
-          padding-bottom: 0px !important;
-        }
-        .heading-title {
-          font-size: 26px !important;
-        }
-        .responsive-image {
-          width: 100% !important;
-        }
-
-        .icon-image {
-          width: 30% !important;
-        }
-
-        .featured-padding {
-          padding-left: 10px !important;
-          padding-right: 12px !important;
-        }
-
-        .featured-nft-heading {
-          padding-left: 22px !important;
-          display: block !important;
-          padding-bottom: 5px !important;
-        }
-
-        .featured-nft-title {
-          padding-left: 5px !important;
-          display: block !important;
-          width: 100% !important;
-        }
-      }
-
-      /* @media (min-width: 460px) {
-        .three-col .column {
-          max-width: 33% !important;
-        }
-        .two-col .column {
+        .inner-table-cell {
           width: 50% !important;
+          max-width: 100% !important;
+          display: inline-block !important;
+        }
+        .spacer {
+          display: none !important;
+        }
+        .card-details {
+          font-size: 18px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .responsive-table {
+          width: 95% !important;
+        }
+        .padding-left {
+          padding-left: 30px !important;
+        }
+        .padding-bottom {
+          padding-bottom: 10px !important;
+        }
+        .mobile-image {
+          width: 50px;
         }
 
-        .line {
-          margin-left: 13px !important;
-          margin-right: 13px !important;
-        }
-        .horizontal-line {
-          margin-left: 13px !important;
-          margin-right: 13px !important;
-        }
-      } */
-
-      @media (min-width: 460px) {
-        .three-col .column {
-          max-width: 100% !important;
-        }
-        .two-col .column {
-          max-width: 100% !important;
-          padding-bottom: 20px !important;
-          margin: auto !important;
-  
-          margin-top: 10px !important;
-          margin-bottom: 20px !important;
+        .mobile-title {
+          font-size: 25px !important;
         }
 
-        .two-col .column img {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin: 0 auto !important;
+        .mobile-copy {
+          font-size: 13px !important;
         }
-        .heading-title {
-          font-size: 26px !important;
+
+        .mobile-links {
+          font-size: 10px !important;
         }
-        .responsive-image {
-          width: 100% !important;
+
+        .mobile-links-image {
+          width: 18px !important;
+          height: 18px !important;
+        }
+
+        .mobile-fine-print {
+          font-size: 10px !important;
+          line-height: 16px;
+        }
+
+        .featured-nft-heading {
+          font-size: 20px !important;
+        }
+        .card-details {
+          font-size: 18px !important;
+        }
+        .footer-padding-left {
+          margin-left: 25px !important;
+          padding-left: 0px !important;
+        }
+      }
+
+      @media only screen and (max-width: 280px) {
+        .mobile-title {
+          font-size: 20px !important;
+          padding-left: 0px !important;
+          margin-left: 0px !important;
+        }
+        .article-heading-icon {
+          width: 16px !important;
+          height: auto !important;
+        }
+        .featured-nft-heading {
+          font-size: 17px !important;
+          padding-top: 18px !important;
+          margin: 8px 0 !important;
         }
       }
     </style>
   </head>
+
   <body
+    id="body"
     style="
-      margin: 0;
-      padding: 0;
-      word-spacing: normal;
-      background-color: #cccccc;
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #fff;
+      font-family: Roboto Condensed, sans-serif;
+      font-size: 18px;
+      line-height: 1.2;
+      color: #000000;
     "
   >
-    <!-- below div is the outer wrapper, role=article and aria-roledescription=email helps screen readers announce its an email or at least an article and will assist navigation b-->
-    <div
-      role="article"
-      aria-roledescription="email"
-      lang="en"
-      style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%"
+    <!-- START OF PREVIEW TEXT -->
+    <div style="display: none; max-height: 0; overflow: hidden">8 Bits</div>
+    <div style="display: none; max-height: 0; overflow: hidden">
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+    </div>
+    <!-- END OF PREVIEW TEXT -->
+
+    <table
+      align="center"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      width="100%"
     >
-      <table
-        role="presentation"
-        style="width: 100%; border: 0; border-spacing: 0"
-      >
-        <tr>
-          <td align="center">
-            <!--[if mso]>
-                    <table role="presentation" align="center" style="width:600px"
-                    <tr>
-                    <td style="padding: 20px 0">
-                  <![endif]-->
-
-            <!--Preheader (remove Comment)-->
-            <div
-              style="
-                font-size: 0px;
-                color: #ffffff;
-                line-height: 1px;
-                mso-line-height-rule: exactly;
-                display: none;
-                max-width: 0px;
-                max-height: 0px;
-                opacity: 0;
-                overflow: hidden;
-                mso-hide: all;
-              "
-            >
-              8-Bits NFTS
-            </div>
-
-            <div
-              class="outer"
-              style="
-                width: 96%;
-                max-width: 600px;
-                margin: 20px auto;
-                background-color: #f9f1fe;
-              "
-            >
-              <!-- white space break -->
-              <!-- <div class="spacer" style="line-height: 10px; height: 2px; mso-line-height-rule: exactly;">&nbsp;</div> -->
-
-              <!-- Single Colum Header -->
-              <table
-                width="100%"
-                align="center"
-                border="0"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-              >
-                <tr>
-                  <td
-                    align="center"
-                    style="
-                      background-color: #2081e2;
-                      max-width: 100%;
-                      padding: 0px;
-                      margin: 0px;
-                    "
-                  >
-                    <a href="#">
-                      <img
-                        src="https://i.ibb.co/sv9cL02/8-Bit-Header.png"
-                        alt="8 bit header"
-                        width="100%"
-                        height="auto"
-                      />
-                    </a>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single column featured nft-->
-              <table
-                bgcolor="#f9f1fe"
-                class=""
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                style="
-                  text-align: left;
-                  display: inline-block;
-                  background-color: #f9f1fe;
-                "
-              >
-                <tr>
-                  <td
-                    class="featured-nft-heading"
-                    align="left"
-                    style="
-                      display: block;
-                      padding-left: 40px;
-                      mso-padding-left-alt: 25px;
-                      text-align: left;
-                      max-width: 100%;
-                      background-color: #f9f1fe;
-                      mso-padding-top-alt: 20px;
-                      padding-bottom: 20px;
-                      mso-padding-bottom-alt: 20px;
-                    "
-                  >
-                    <p
-                      style="
-                        padding-top: 30px;
-                        margin-bottom: 10px;
-                        font-size: 25px;
-                        font-weight: bold;
-                        text-align: left;
-                        align-items: left;
-                        font-family: Poppins, Arial, serif;
-                        color: #302f2f;
-                        text-transform: uppercase;
-                      "
-                    >
-                      featured nft
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Single Column FEATURED NFT -->
-              <table
-                bgcolor="#ffffff"
-                class="column"
-                width="90%"
-                style="
-                  align-items: center;
-                  text-align: center;
-                  border: 1px solid #ececec;
-                "
-                role="presentation"
-                cellpadding="0"
-                cellspacing="0"
-              >
-                <tr>
-                  <td style="">
-                    <a href="#">
-                      <img
-                        class="responsive-image"
-                        src="https://i.ibb.co/WyHHd4W/featured-1.jpg"
-                        alt="featured-1"
-                        border="0"
-                        width="100%"
-                        height="auto"
-                        style="
-                          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                        "
-                      />
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table
-                      role="presentation"
-                      cellpadding="0"
-                      cellspacing="0"
-                      border="0"
-                    >
-                      <tr>
-                        <td
-                          class="featured-nft-title"
-                          style="padding-left: 20px"
-                        >
-                          <p
-                            style="
-                              font-size: 16px;
-                              font-family: Poppins, Arial, serif;
-                              font-size: 20px;
-                              font-weight: bold;
-                              text-transform: uppercase;
-                              align-items: left;
-                              color: black;
-                              margin-bottom: 10px;
-                              padding-top: 10px;
-                            "
-                          >
-                            Bedroom #100
-                          </p>
-                        </td>
-                        <td width="8px"></td>
-                        <td style="vertical-align: middle" valign="middle">
-                          <table
-                            role="presentation"
-                            cellpadding="0"
-                            cellspacing="0"
-                            border="0"
-                          >
-                            <tr>
-                              <td
-                                style="
-                                  vertical-align: middle;
-                                  mso-padding-bottom-alt: 10px;
-                                  mso-padding-left-alt: 5px;
-                                "
-                                height="25"
-                              >
-                                <img
-                                  class="article-heading-icon"
-                                  src="https://i.ibb.co/vhLr7x7/verified-icon.png"
-                                  alt="verified-icon"
-                                  border="0"
-                                  width="20"
-                                  height="20"
-                                  style="
-                                    align-items: center;
-                                    vertical-align: middle;
-                                    margin-top: 18px;
-                                  "
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    class="featured-padding"
-                    style="padding-left: 20px; padding-right: 20px"
-                  >
-                    <p
-                      align="left"
-                      style="
-                        word-wrap: break-word;
-                        font-family: 'Poppins';
-                        align-items: left;
-                        font-size: 15px;
-                        color: rgb(63, 63, 63);
-                        letter-spacing: 0.5px;
-                        list-style: none;
-                        line-height: 1.5;
-                      "
-                    >
-                      The fully-generative collection of 6765 NFTs, that are
-                      based on SuperNES inspired rooms. To achieve this, our
-                      algorithmic program will use the buyer’s personal on-chain
-                      wallet data and cosmology information to create a
-                      data-driven Isometric 3D art experience that will come to
-                      life on the Ethereum blockchain.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- white space break -->
-              <table
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                bgcolor="#f9f1fe"
-              >
-                <tr>
-                  <td height="40" width="100%" style="mso-shader: #f4f4f4">
-                    &nbsp;
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single column start of notable nfts-->
-              <table
-                bgcolor="#f4f4f4"
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                style="
-                  text-align: left;
-                  display: inline-block;
-                  background-color: #f4fdf4;
-                  mso-shading: #f4fdf4;
-                "
-              >
-                <tr>
-                  <td
-                    class="heading"
-                    align="left"
-                    style="
-                      display: block;
-                      padding-left: 40px;
-                      mso-padding-left-alt: 25px;
-                      text-align: left;
-                      max-width: 100%;
-                      background-color: #f4fdf4;
-                      mso-padding-top-alt: 20px;
-                    "
-                  >
-                    <p
-                      style="
-                        padding-top: 20px;
-                        padding-bottom: 5px;
-                        font-size: 25px;
-                        font-weight: bold;
-                        text-align: left;
-                        align-items: left;
-                        font-family: Poppins, Arial, serif;
-                        color: #302f2f;
-                        text-transform: uppercase;
-                      "
-                    >
-                      notable nfts
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Notable NFTS column 1 -->
-              <div
-                bgcolor="#f4fdf4"
-                width="100%"
-                class="two-col"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                style="background-color: #f4fdf4"
-              >
-                <!-- font size 0 so that column can sit side by side -->
-                <!--[if mso]>
-                          <table role="presentation" width="100%" bgcolor="#f4fdf4" style="background-color:##f4fdf4;mso-shading:#F4FDF4">
-                          <tr>
-                          <td style="width:50%; padding: 10px; valign="top">
-                        <![endif]-->
-                <div
-                  class="column"
-                  width="260"
-                  style="
-                    background-color: #ffffff;
-                    mso-shading: #f4fdf4;
-                    max-width: 260px;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-left: 5px;
-                    margin-bottom: 20px;
-                    mso-padding-bottom-alt: 20px;
-                    border: 1px solid #e5e4e2;
-                    mso-border-alt: 1px solid #ececec;
-                    mso-padding-left: 0px;
-                  "
+      <tr>
+        <td align="center" style="padding: 30px 0px">
+          <!-- START OF HTML EMAIL (600PX WIDE) -->
+          <table
+            align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            width="600"
+            style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)"
+            class="responsive-table"
+          >
+            <!-- START OF LOGO IMAGE -->
+            <tr>
+              <td align="center" style="padding-top: 0px">
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
                 >
-                  <div
-                    style="
-                      mso-shading: #f4fdf4;
-                      font-size: 14px;
-                      line-height: 18px;
-                      text-align: center;
-                    "
-                  >
-                    <a style="font-family: Arial, sans-serif; font-size: 14px">
-                      <img
-                        src="https://i.ibb.co/rfLb2qK/notable-collection-1.jpg"
-                        width="260"
-                        alt="trending-collection-1"
-                        style="display: block; max-width: 100%; height: auto"
-                      />
-                    </a>
-                    <p
-                      style="
-                        mso-shading: #f4fdf4;
-                        font-family: Poppins, Arial, serif;
-                        text-align: center;
-                        color: black;
-                        margin-bottom: 18px;
-                        overflow: hidden;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      "
-                    >
-                      Bedroom #53
-                    </p>
-                    <div
-                      style="text-align: center; font-size: 0; max-width: 100%"
-                    >
-                      <!--[if mso]>
-                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" >
-                              <tr>
-                              <td style="width:50%; " valign="top">
-                            <![endif]-->
-                      <div
-                        bgcolor="#f4fdf4"
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-right: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Floor
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          2.5 ETH
-                        </p>
-                      </div>
-                      <!--[if mso]>
-                                </td>
-                                <td style="width:50%;" valign="top">
-                              <![endif]-->
-                      <div
-                        bgcolor="#f4fdf4"
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-left: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Volume
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          27 ETH
-                        </p>
-                      </div>
-                    </div>
-                    <!--[if mso]>
-                            </td>
-                            </tr>
-                            </table>
-                          <![endif]-->
-                  </div>
-                </div>
-                <!--[if mso]>
-                          </td>
-                          <td style="width:50%;padding: 10px;" valign="top">
-                        <![endif]-->
-                <div
-                  bgcolor="#f4f4f4"
-                  class="column"
-                  width="260"
-                  style="
-                    background-color: #ffffff;
-                    mso-shading: #f4fdf4;
-                    max-width: 260px;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-left: 5px;
-                    margin-bottom: 20px;
-                    mso-padding-bottom-alt: 20px;
-                    border: 1px solid #e5e4e2;
-                    mso-border-alt: 1px solid #ececec;
-                    mso-padding-left: 0px;
-                  "
-                >
-                  <div
-                    bgcolor="#f4f4f4"
-                    style="
-                      mso-shading: #f4fdf4;
-                      font-size: 14px;
-                      line-height: 18px;
-                      text-align: center;
-                    "
-                  >
-                    <a style="font-family: Arial, sans-serif; font-size: 14px">
-                      <img
-                        src="https://i.ibb.co/8X1KwSC/notable-collection-2.jpg"
-                        width="260"
-                        alt="notable-collection-2"
-                        style="display: block; max-width: 100%; height: auto"
-                      />
-                    </a>
-                    <p
-                      style="
-                        mso-shading: #f4fdf4;
-                        font-family: Poppins, Arial, serif;
-                        text-align: center;
-                        color: black;
-                        margin-bottom: 18px;
-                        overflow: hidden;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      "
-                    >
-                      Spaceship #87
-                    </p>
-                    <div
-                      style="text-align: center; font-size: 0; max-width: 100%"
-                    >
-                      <!--[if mso]>
-                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" >
-                              <tr>
-                              <td style="width:50%; " valign="top">
-                            <![endif]-->
-                      <div
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-right: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Floor
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          4.5 ETH
-                        </p>
-                      </div>
-                      <!--[if mso]>
-                                </td>
-                                <td style="width:50%;" valign="top">
-                              <![endif]-->
-                      <div
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-left: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Volume
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          45 ETH
-                        </p>
-                      </div>
-                    </div>
-                    <!--[if mso]>
-                            </td>
-                            </tr>
-                            </table>
-                          <![endif]-->
-                  </div>
-                </div>
-
-                <!--[if mso]>
-                          </td>
-                          </tr>
-                          </table>
-                        <![endif]-->
-              </div>
-
-              <!-- white space break -->
-              <!--[if mso]>
-											<i style="letter-spacing:50px;mso-font-width:-100%;display:inline-block;width:150px; mso-line-height-alt:40px;mso-shader:#f4f4f4;">&#8202;
- 										<![endif]-->
-              <!--                     <div bgcolor="#f4fdf4" class="spacer" style="mso-shader:#f4f4f4;background-color:#f4fdf4; color: #f4f4f4;line-height: 10px; height: 10px; mso-line-height-rule: exactly;">&nbsp;</div>
-                     -->
-              <!--[if mso]>
-											</i>
- 										<![endif]-->
-
-              <!-- white space break -->
-              <table
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                bgcolor="#f4fdf4"
-              >
-                <tr>
-                  <td height="20" width="100%" style="mso-shader: #f4f4f4">
-                    &nbsp;
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single column start of notable collections-->
-              <table
-                bgcolor="#f4fdf4"
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                style="
-                  text-align: left;
-                  display: inline-block;
-                  background-color: #f4fdf4;
-                  mso-shading: #f4f4f4;
-                "
-              >
-                <tr>
-                  <td
-                    class="heading"
-                    align="left"
-                    style="
-                      display: block;
-                      padding-left: 40px;
-                      mso-padding-left-alt: 25px;
-                      text-align: left;
-                      max-width: 100%;
-                      background-color: #f4fdf4;
-                      mso-padding-top-alt: 20px;
-                    "
-                  >
-                    <p
-                      style="
-                        padding-top: 20px;
-                        padding-bottom: 5px;
-                        font-size: 25px;
-                        font-weight: bold;
-                        text-align: left;
-                        align-items: left;
-                        font-family: Poppins, Arial, serif;
-                        color: #302f2f;
-                        text-transform: uppercase;
-                      "
-                    >
-                      trending nfts
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Notable NFTS column 2 -->
-              <div
-                bgcolor="#f4fdf4"
-                width="100%"
-                class="two-col"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                style="background-color: #f4fdf4"
-              >
-                <!-- font size 0 so that column can sit side by side -->
-                <!--[if mso]>
-                          <table role="presentation" width="100%" bgcolor="#f4fdf4" style="background-color:##f4fdf4;mso-shading:#F4FDF4">
-                          <tr>
-                          <td style="width:50%; padding: 10px; valign="top">
-                        <![endif]-->
-                <div
-                  class="column"
-                  width="260"
-                  style="
-                    background-color: #ffffff;
-                    mso-shading: #f4fdf4;
-                    max-width: 260px;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-left: 5px;
-                    margin-bottom: 20px;
-                    mso-padding-bottom-alt: 20px;
-                    border: 1px solid #e5e4e2;
-                    mso-border-alt: 1px solid #ececec;
-                    mso-padding-left: 0px;
-                  "
-                >
-                  <div
-                    style="
-                      mso-shading: #f4fdf4;
-                      font-size: 14px;
-                      line-height: 18px;
-                      text-align: center;
-                    "
-                  >
-                    <a style="font-family: Arial, sans-serif; font-size: 14px">
-                      <img
-                        src="https://i.ibb.co/cC0yMDN/trending-1.jpg"
-                        width="260"
-                        alt="trending-collection-1"
-                        style="display: block; max-width: 100%; height: auto"
-                      />
-                    </a>
-                    <p
-                      style="
-                        mso-shading: #f4fdf4;
-                        font-family: Poppins, Arial, serif;
-                        text-align: center;
-                        color: black;
-                        margin-bottom: 18px;
-                        overflow: hidden;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      "
-                    >
-                      Kuntash #321
-                    </p>
-                    <div
-                      style="text-align: center; font-size: 0; max-width: 100%"
-                    >
-                      <!--[if mso]>
-                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" >
-                              <tr>
-                              <td style="width:50%; " valign="top">
-                            <![endif]-->
-                      <div
-                        bgcolor="#f4fdf4"
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-right: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Floor
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          12.0 ETH
-                        </p>
-                      </div>
-                      <!--[if mso]>
-                                </td>
-                                <td style="width:50%;" valign="top">
-                              <![endif]-->
-                      <div
-                        bgcolor="#f4fdf4"
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-left: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Volume
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          249 ETH
-                        </p>
-                      </div>
-                    </div>
-                    <!--[if mso]>
-                            </td>
-                            </tr>
-                            </table>
-                          <![endif]-->
-                  </div>
-                </div>
-                <!--[if mso]>
-                          </td>
-                          <td style="width:50%;padding: 10px;" valign="top">
-                        <![endif]-->
-                <div
-                  bgcolor="#f4f4f4"
-                  class="column"
-                  width="260"
-                  style="
-                    background-color: #ffffff;
-                    mso-shading: #f4fdf4;
-                    max-width: 260px;
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-left: 5px;
-                    margin-bottom: 20px;
-                    mso-padding-bottom-alt: 20px;
-                    border: 1px solid #e5e4e2;
-                    mso-border-alt: 1px solid #ececec;
-                    mso-padding-left: 0px;
-                  "
-                >
-                  <div
-                    bgcolor="#f4f4f4"
-                    style="
-                      mso-shading: #f4fdf4;
-                      font-size: 14px;
-                      line-height: 18px;
-                      text-align: center;
-                    "
-                  >
-                    <a style="font-family: Arial, sans-serif; font-size: 14px">
-                      <img
-                        src="https://i.ibb.co/8gLQ777/trending-2.jpg"
-                        width="260"
-                        alt="trending-collection-1"
-                        style="display: block; max-width: 100%; height: auto"
-                      />
-                    </a>
-                    <p
-                      style="
-                        mso-shading: #f4fdf4;
-                        font-family: Poppins, Arial, serif;
-                        text-align: center;
-                        color: black;
-                        margin-bottom: 18px;
-                        overflow: hidden;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      "
-                    >
-                      OutaTime #1025
-                    </p>
-                    <div
-                      style="text-align: center; font-size: 0; max-width: 100%"
-                    >
-                      <!--[if mso]>
-                              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" >
-                              <tr>
-                              <td style="width:50%; " valign="top">
-                            <![endif]-->
-                      <div
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-right: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Floor
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          8.7 ETH
-                        </p>
-                      </div>
-                      <!--[if mso]>
-                                </td>
-                                <td style="width:50%;" valign="top">
-                              <![endif]-->
-                      <div
-                        width="100%"
-                        align="center"
-                        style="
-                          max-width: 100%;
-                          display: inline-block;
-                          vertical-align: top;
-                          margin-left: 10px;
-                        "
-                      >
-                        <p
-                          class="category-heading"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                          "
-                        >
-                          Volume
-                        </p>
-                        <p
-                          align="center"
-                          style="
-                            font-family: Poppins, Arial, serif;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: black;
-                          "
-                        >
-                          135 ETH
-                        </p>
-                      </div>
-                    </div>
-                    <!--[if mso]>
-                            </td>
-                            </tr>
-                            </table>
-                          <![endif]-->
-                  </div>
-                </div>
-
-                <!--[if mso]>
-                          </td>
-                          </tr>
-                          </table>
-                        <![endif]-->
-              </div>
-
-              <!-- white space break -->
-              <table
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                bgcolor="#f4fdf4"
-              >
-                <tr>
-                  <td height="40" width="100%" style="mso-shader: #f4f4f4">
-                    &nbsp;
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single column upcoming events -->
-              <table
-                bgcolor="#ddefff"
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                border="0"
-              >
-                <tr>
-                  <td>
-                    <table
-                      width="100%"
-                      cellpadding="0"
-                      cellspacing="0"
-                      role="presentation"
-                      border="0"
-                    >
-                      <tr>
-                        <td
-                          class="heading"
-                          align="left"
-                          style="
-                            display: block;
-                            padding-left: 40px;
-                            mso-padding-left-alt: 25px;
-                            text-align: left;
-                            max-width: 100%;
-                            background: #ddefff;
-                            mso-padding-top-alt: 25px;
-                            mso-bottom-top-alt: 25px;
-                            font-family: Poppins, serif;
-                            mso-padding-left-alt: 40px;
-                          "
-                        >
-                          <p
-                            style="
-                              padding-top: 20px;
-                              padding-bottom: 5px;
-                              font-size: 25px;
-                              font-weight: bold;
-                              text-align: left;
-                              align-items: left;
-                              font-family: Poppins, Arial, serif;
-                              color: #302f2f;
-                              text-transform: uppercase;
-                            "
-                          >
-                            upcoming events
-                          </p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="responsive-image"
-                          style="
-                            align-items: center;
-                            text-align: center;
-                            background-color: #ddefff;
-                            mso-padding-top-alt: 20px;
-                          "
-                          width="100%"
-                        >
-                          <a href="#">
-                            <img
-                              class="events-image"
-                              src="https://i.ibb.co/7y2dTH6/upcoming-1.jpg"
-                              alt="upcoming-1"
-                              border="0"
-                              width="87%"
-                              height="auto"
-                              style="
-                                border-radius: 10px;
-                                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                              "
-                            />
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            align-items: left;
-                            text-align: left;
-                            padding-left: 40px;
-                            padding-right: 40px;
-                          "
-                          width="90%"
-                        >
-                          <a
-                            href="#"
-                            target="_blank"
-                            style="text-decoration: none"
-                          >
-                            <p
-                              style="
-                                font-family: Poppins, Arial, sans-serif;
-                                text-align: left;
-                                align-items: left;
-                                color: black;
-                                font-weight: bold;
-                                overflow: hidden;
-                                line-height: 27px;
-                                text-transform: uppercase;
-                                font-size: 22px;
-                              "
-                            >
-                              NFT Paris
-                            </p>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            padding-bottom: 20px;
-                            padding-left: 40px;
-                            padding-right: 40px;
-                            max-width: 500px;
-                          "
-                          width="600"
-                        >
-                          <p
-                            class="article-text"
-                            style="
-                              word-wrap: break-word;
-                              font-family: 'Poppins';
-                              align-items: left;
-                              font-size: 16px;
-                              color: #3f3f3f;
-                              letter-spacing: 0.5px;
-                              list-style: none;
-                              line-height: 1.5;
-                              padding-bottom: 10px;
-                              text-align: left;
-                              line-height: 1.6;
-                            "
-                          >
-                            NFT Paris will feature speakers from top Web3
-                            companies and offer attendees the chance to learn
-                            from industry experts and network with other
-                            leaders.
-                          </p>
-                          <p
-                            style="
-                              font-family: Poppins, Arial, sans-serif;
-                              font-weight: bold;
-                              align-items: left;
-                              font-size: 14px;
-                              letter-spacing: 2px;
-                            "
-                          >
-                            Feb 23-24th
-                          </p>
-                          <p
-                            style="
-                              font-family: Poppins, Arial, sans-serif;
-                              font-weight: bold;
-                              align-items: left;
-                              font-size: 14px;
-                              letter-spacing: 2px;
-                              line-height: 30px;
-                            "
-                          >
-                            The Grand Palais, Paris
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single column latest article -->
-              <table
-                bgcolor="#f8f4bc"
-                width="100%"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-                border="0"
-              >
-                <tr>
-                  <td>
-                    <table
-                      width="100%"
-                      cellpadding="0"
-                      cellspacing="0"
-                      role="presentation"
-                      border="0"
-                    >
-                      <tr>
-                        <td
-                          class="heading"
-                          align="left"
-                          style="
-                            display: block;
-                            padding-left: 40px;
-                            mso-padding-left-alt: 25px;
-                            text-align: left;
-                            max-width: 100%;
-                            background: #f8f4bc;
-                            mso-padding-top-alt: 25px;
-                            mso-bottom-top-alt: 25px;
-                            mso-padding-left-alt: 40px;
-                          "
-                        >
-                          <p
-                            style="
-                              padding-top: 20px;
-                              padding-bottom: 5px;
-                              font-size: 25px;
-                              font-weight: bold;
-                              text-align: left;
-                              align-items: left;
-                              font-family: Poppins, Arial, serif;
-                              color: #302f2f;
-                              text-transform: uppercase;
-                            "
-                          >
-                            Latest Article
-                          </p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="responsive-image"
-                          style="
-                            align-items: center;
-                            text-align: center;
-                            background-color: #f8f4bc;
-                            mso-padding-top-alt: 20px;
-                          "
-                          width="90%"
-                        >
-                          <a href="#">
-                            <img
-                              class="events-image"
-                              src="https://i.ibb.co/y5LvZZ7/article.jpg"
-                              alt="upcoming-1"
-                              border="0"
-                              width="87%"
-                              height="auto"
-                              style="
-                                border-radius: 10px;
-                                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-                                  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                              "
-                            />
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            align-items: left;
-                            text-align: left;
-                            padding-left: 40px;
-                            padding-right: 40px;
-                          "
-                          width="90%"
-                        >
-                          <a
-                            href="#"
-                            target="_blank"
-                            style="text-decoration: none"
-                          >
-                            <p
-                              style="
-                                font-family: Poppins, Arial, sans-serif;
-                                text-align: left;
-                                align-items: left;
-                                color: black;
-                                font-weight: bold;
-                                overflow: hidden;
-                                line-height: 27px;
-                                text-transform: uppercase;
-                                font-size: 22px;
-                              "
-                            >
-                              How to Create Awesome NFTs with MidJourney
-                            </p>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          align="left"
-                          style="
-                            padding-bottom: 20px;
-                            padding-left: 40px;
-                            padding-right: 40px;
-                            max-width: 500px;
-                          "
-                          width="100%"
-                        >
-                          <p
-                            class="article-text"
-                            style="
-                              word-wrap: break-word;
-                              font-family: 'Poppins';
-                              align-items: left;
-                              font-size: 16px;
-                              color: #3f3f3f;
-                              letter-spacing: 0.5px;
-                              list-style: none;
-                              line-height: 1.5;
-                              padding-bottom: 10px;
-                              text-align: left;
-                              line-height: 1.6;
-                            "
-                          >
-                            Non-fungible tokens (NFTs) are changing the way we
-                            think about digital art, collectibles, and other
-                            unique digital assets. The use of NFTs allows for
-                            the creation of one-of-a-kind items that can be
-                            bought, sold, and traded just like physical objects.
-                          </p>
-                          <a style="color: black">
-                            <p
-                              style="
-                                font-family: Poppins, Arial, sans-serif;
-                                font-weight: bold;
-                                align-items: left;
-                                font-size: 14px;
-                                letter-spacing: 2px;
-                                text-decoration: none;
-                              "
-                            >
-                              Read More...
-                            </p>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td align="left" style="background-color: #f8f4bc">
-                          <table
-                            width="100%"
-                            align="left"
-                            bgcolor="#f8f4bc"
-                            role="presentation"
-                            width="600"
-                            style="background-color: #f8f4bc; max-width: 100%"
-                          >
-                            <tr>
-                              <td
-                                align="left"
-                                width="50"
-                                style="
-                                  display: inline-block;
-                                  background-color: #f8f4bc;
-                                  padding-left: 40px;
-                                  max-width: 100%;
-                                "
-                              >
-                                <img
-                                  width="45"
-                                  height="45"
-                                  style="
-                                    border-radius: 50%;
-                                    align-items: center;
-                                    vertical-align: center;
-                                  "
-                                  src="https://i.ibb.co/Q8Z8hC6/profile-icon.jpg"
-                                  alt="profile-icon"
-                                  border="0"
-                                />
-                              </td>
-                              <td
-                                style="
-                                  display: inline-block;
-                                  padding-left: 10px;
-                                  background-color: #f8f4bc;
-                                "
-                              >
-                                <p
-                                  align="left"
-                                  style="
-                                    font-family: Poppins, Arial, serif;
-                                    text-transform: uppercase;
-                                    align-items: left;
-                                    vertical-align: middle;
-                                    font-size: 9px;
-                                    text-align: left;
-                                    font-style: italic;
-                                  "
-                                >
-                                  by William F. Guile
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          width="600"
-                          style="
-                            max-width: 100%;
-                            mso-padding-left-alt: 40px;
-                            mso-padding-right-alt: 40px;
-                            mso-padding-top-alt: 20px;
-                            mso-padding-bottom-alt: 20px;
-                          "
-                        >
-                          <p
-                            align="left"
-                            style="
-                              font-family: 'Poppins', Arial, serif;
-                              align-items: left;
-                              font-size: 12px;
-                              font-weight: 500;
-                              color: #000000;
-                              text-transform: uppercase;
-                              display: block;
-                              letter-spacing: 1px;
-                              padding-bottom: 10px;
-                              padding-top: 8px;
-                              padding-left: 40px;
-                              padding-right: 40px;
-                            "
-                          >
-                            February 15th, 2023
-                          </p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          width="600"
-                          style="background-color: #f8f4bc"
-                          height="10"
-                        ></td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-
-              <!--single column start of latest article -->
-              <!-- <table width="100%" bgcolor="#f8f4bc" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" >
                   <tr>
-                      <td class="heading" align="left" style="display:block;padding-left: 40px;mso-padding-left-alt: 25px;text-align:left;max-width:100%;background: #f8f4bc;mso-padding-top-alt: 25px;mso-bottom-top-alt: 25px;">
-                        <p style="padding-top: 10px; font-size: 25px; font-weight: bold; text-align: left; align-items: left; font-family: Poppins, Arial, serif; color: #302f2f; text-transform: uppercase ">Latest Article</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center"  style="align-items: center; text-align: center;" width="100%">
-                        <table bgcolor=" #f8f4bc" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                    <td align="center">
+                      <a
+                        target="_blank"
+                        style="text-transform: uppercase; margin-bottom: 0"
+                      >
+                        <img
+                          src="https://i.ibb.co/sv9cL02/8-Bit-Header.png"
+                          alt="Hero image"
+                          width="100%"
+                          height="auto"
+                          style="display: block; border: none"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF LOGO IMAGE -->
+
+            <!-- START OF FEATURED TEXT -->
+            <tr>
+              <td
+                align="left"
+                style="
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  background-color: #f9f1fe;
+                  padding-left: 40px;
+                "
+                class="padding-left padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" width="100%" style="display: block">
+                      <p
+                        style="
+                          width: 100%;
+                          margin-bottom: 10px;
+                          font-size: 30px;
+                          font-weight: bold;
+                          text-align: left;
+                          font-family: Poppins, Arial, serif;
+                          color: #302f2f;
+                          text-transform: uppercase;
+                        "
+                        class="mobile-title"
+                      >
+                        Featured NFT
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF FEATURED TEXT -->
+
+            <!-- START OF MAIN HERO IMAGE -->
+            <tr>
+              <td
+                align="center"
+                style="
+                  background-color: #f9f1fe;
+                  padding-bottom: 40px;
+                  margin: 0;
+                "
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #f9f1fe"
+                >
+                  <tr>
+                    <td
+                      width="100%"
+                      align="center"
+                      style="background-color: #f9f1fe; padding-top: 10px"
+                    >
+                      <img
+                        src="https://i.ibb.co/WyHHd4W/featured-1.jpg"
+                        alt="hero-1-resized"
+                        border="0"
+                        style="width: 88%; height: auto; display: block"
+                        alt="hero-image"
+                        class="db"
+                      />
+                    </td>
+                  </tr>
+                  <!-- START OF FEATURED NFT DETAILS -->
+                  <tr>
+                    <td
+                      align="center"
+                      style="background-color: #f9f1fe; margin: 0"
+                      bgcolor="#f9f1fe"
+                      width="100%"
+                    >
+                      <table
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="88%"
+                        style="background-color: #f9f1fe"
+                      >
+                        <tr>
+                          <td
+                            align="left"
+                            style="background-color: #fff; margin: 0; padding-top: 8px;"
+                          >
+                            <table
+                              role="presentation"
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              style="background-color: #fff"
+                            >
+                              <tr>
+                                <td style="padding-left: 20px; margin: 0">
+                                  <p
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      font-weight: bold;
+                                      text-transform: uppercase;
+                                      align-items: left;
+                                      color: black;
+                                      margin-bottom: 10px;
+                                      padding-top: 10px;
+                                      font-size: 20px;
+                                      margin: 0;
+                                    "
+                                    class="featured-nft-heading"
+                                  >
+                                    Bedroom #100
+                                  </p>
+                                </td>
+                                <td width="8px" style="margin: 0"></td>
+                                <td
+                                  style="vertical-align: middle"
+                                  valign="middle"
+                                >
+                                  <table
+                                    role="presentation"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    border="0"
+                                  >
+                                    <tr>
+                                      <td
+                                        style="
+                                          vertical-align: middle;
+                                          mso-padding-bottom-alt: 10px;
+                                          mso-padding-left-alt: 5px;
+                                        "
+                                        height="25"
+                                      >
+                                        <img
+                                          class="article-heading-icon"
+                                          src="https://i.ibb.co/vhLr7x7/verified-icon.png"
+                                          alt="verified-icon"
+                                          border="0"
+                                          width="20"
+                                          height="20"
+                                          style="
+                                            align-items: center;
+                                            vertical-align: middle;
+                                            margin-top: 7px;
+                                          "
+                                        />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding-left: 20px;
+                              padding-right: 20px;
+                              background-color: #fff;
+                            "
+                          >
+                            <p
+                              align="left"
+                              style="
+                                word-wrap: break-word;
+                                font-family: 'Poppins';
+                                align-items: left;
+                                font-size: 15px;
+                                color: rgb(63, 63, 63);
+                                letter-spacing: 0.5px;
+                                list-style: none;
+                                line-height: 1.5;
+                              "
+                              class="mobile-copy"
+                            >
+                              The fully-generative collection of 6765 NFTs, that
+                              are based on SuperNES inspired rooms. To achieve
+                              this, our algorithmic program will use the buyer’s
+                              personal on-chain wallet data and cosmology
+                              information to create a data-driven Isometric 3D
+                              art experience that will come to life on the
+                              Ethereum blockchain.
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END OF FEATURED NFT DETAILS -->
+                </table>
+              </td>
+            </tr>
+            <!-- END OF MAIN HERO IMAGE -->
+
+            <!-- WHITE SPACE -->
+            <tr>
+              <td bgcolor="#f9f1fe" style="background-color: #f9f1fe">
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #f9f1fe"
+                >
+                  <tr>
+                    <td width="100%" height="20px">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- WHITE SPACE -->
+
+            <!-- START OF NOTABLE NFT TEXT -->
+            <tr>
+              <td
+                align="left"
+                style="
+                  padding-bottom: 10px;
+                  background-color: #f4fdf4;
+                  padding-left: 40px;
+                "
+                class="padding-left padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" width="100%" style="display: block">
+                      <p
+                        style="
+                          width: 100%;
+                          margin-bottom: 10px;
+                          font-size: 30px;
+                          font-weight: bold;
+                          text-align: left;
+                          font-family: Poppins, Arial, serif;
+                          color: #302f2f;
+                          text-transform: uppercase;
+                        "
+                        class="mobile-title"
+                      >
+                        NOTABLE NFTs
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF FEATURED TEXT -->
+
+            <!-- START OF 1st TWO COLUMN NFT -->
+            <tr>
+              <td
+                align="center"
+                bgcolor="#f4fdf4"
+                style="background-color: #f4fdf4"
+                width="100%"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="540"
+                  class="responsive-table"
+                  bgcolor="#f4fdf4"
+                  style="background-color: #f4fdf4"
+                >
+                  <tr>
+                    <!-- START OF 1st Product Card -->
+                    <td width="260" class="dw db">
+                      <!--[if (gte mso 9) | (IE)]>
+                      <table width="100%" style="border-spacing: 0;" 
+                      bgcolor="#f4fdf4" style="background-color:#f4fdf4;role="presentation">
+                        <tr>
+                          <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                      <![endif]-->
+                      <table
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="100%"
+                        class="responsive-table"
+                      >
+                        <tr>
+                          <td bgcolor="ffffff">
+                            <img
+                              class="image"
+                              src="https://i.ibb.co/rfLb2qK/notable-collection-1.jpg"
+                              alt="trending-collection-1"
+                              width="260"
+                              height="auto"
+                              style="display: block; border: none"
+                            />
+                            <p
+                              class="mobile-copy card-details"
+                              style="
+                                background-color: #ffffff;
+                                mso-shading: #ffffff;
+                                font-family: Poppins, Arial, serif;
+                                text-align: center;
+                                color: black;
+                                margin-bottom: 18px;
+                                overflow: hidden;
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Bedroom #53
+                            </p>
+                            <!--[if (gte mso 9) | (IE)]>
+                            <table width="100%" style="border-spacing: 0;" 
+                            bgcolor="#fff" style="background-color:#fff;role="presentation">
+                              <tr>
+                              <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              width="100%"
+                              class="responsive-table"
+                            >
+                              <tr>
+                                <td
+                                  width="110"
+                                  align="center"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    Floor
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                    "
+                                  >
+                                    2.5 ETH
+                                  </p>
+                                </td>
+                                <!--[if mso]>
+                                </td>
+                                <td style="width:50%;" valign="top">
+                              <![endif]-->
+                                <td width="10" height="20" class="dw db spacer">
+                                  &nbsp;
+                                </td>
+                                <td
+                                  width="110"
+                                  style="max-width: 100%"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    Volume
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    25 ETH
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--[if (gte mso 9) | (IE)]>
+                                </td>
+                              </tr>
+                            </table>
+                          <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if (gte mso 9) | (IE)]>
+                          </td>
+                        </tr>
+                      </table>
+                    <![endif]-->
+                    </td>
+                    <!-- END OF 1st Product Card -->
+
+                    <td width="20" height="20" class="dw db">&nbsp;</td>
+
+                    <td width="260" class="dw db">
+                      <!--[if (gte mso 9) | (IE)]>
+                      <table width="100%" style="border-spacing: 0;" 
+                      bgcolor="#f4fdf4" style="background-color:#f4fdf4;role="presentation">
+                        <tr>
+                          <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                      <![endif]-->
+                      <table
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="100%"
+                        class="responsive-table"
+                      >
+                        <tr>
+                          <td bgcolor="ffffff">
+                            <img
+                              class="image"
+                              src="https://i.ibb.co/8X1KwSC/notable-collection-2.jpg"
+                              alt="trending-collection-2"
+                              width="260"
+                              height="auto"
+                              style="display: block; border: none"
+                            />
+                            <p
+                              class="mobile-copy card-details"
+                              style="
+                                background-color: #ffffff;
+                                mso-shading: #ffffff;
+                                font-family: Poppins, Arial, serif;
+                                text-align: center;
+                                color: black;
+                                margin-bottom: 18px;
+                                overflow: hidden;
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Spaceship #87
+                            </p>
+                            <!--[if (gte mso 9) | (IE)]>
+                            <table width="100%" style="border-spacing: 0;" 
+                            bgcolor="#fff" style="background-color:#fff;role="presentation">
+                              <tr>
+                              <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                            <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              width="100%"
+                              class="responsive-table"
+                            >
+                              <tr>
+                                <td
+                                  width="110"
+                                  align="center"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    Floor
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                    "
+                                  >
+                                    4.5 ETH
+                                  </p>
+                                </td>
+                                <!--[if mso]>
+                                </td>
+                                <td style="width:50%;" valign="top">
+                              <![endif]-->
+                                <td width="10" height="20" class="dw db spacer">
+                                  &nbsp;
+                                </td>
+                                <td
+                                  width="110"
+                                  style="max-width: 100%"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    Volume
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    45 ETH
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--[if (gte mso 9) | (IE)]>
+                                </td>
+                              </tr>
+                            </table>
+                          <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if (gte mso 9) | (IE)]>
+                          </td>
+                        </tr>
+                      </table>
+                    <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF 1st TWO COLUMN NFT -->
+
+            <!-- WHITE SPACE -->
+            <tr>
+              <td bgcolor="#f4fdf4" style="background-color: #f4fdf4">
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #f4fdf4"
+                >
+                  <tr>
+                    <td width="100%" height="30px">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- WHITE SPACE -->
+
+            <!-- START OF TRENDING NFT TEXT -->
+            <tr>
+              <td
+                align="left"
+                style="
+                  padding-bottom: 10px;
+                  background-color: #f4fdf4;
+                  padding-left: 40px;
+                "
+                class="padding-left padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" width="100%" style="display: block">
+                      <p
+                        style="
+                          width: 100%;
+                          margin-bottom: 10px;
+                          font-size: 30px;
+                          font-weight: bold;
+                          text-align: left;
+                          font-family: Poppins, Arial, serif;
+                          color: #302f2f;
+                          text-transform: uppercase;
+                        "
+                        class="mobile-title"
+                      >
+                        TRENDING NFTs
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF TRENDING TEXT -->
+
+            <!-- START OF 2nd TWO COLUMN NFT -->
+            <tr>
+              <td
+                align="center"
+                bgcolor="#f4fdf4"
+                style="background-color: #f4fdf4"
+                width="100%"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="540"
+                  class="responsive-table"
+                  bgcolor="#f4fdf4"
+                  style="background-color: #f4fdf4"
+                >
+                  <tr>
+                    <!-- START OF 1st Product Card -->
+                    <td width="260" class="dw db">
+                      <!--[if (gte mso 9) | (IE)]>
+                        <table width="100%" style="border-spacing: 0;" 
+                        bgcolor="#f4fdf4" style="background-color:#f4fdf4;role="presentation">
                           <tr>
-                            <td class="darkmode" style="background-color: #f8f4bc;align-items: center; text-align: center;" width="600">
-                                <a href="#">
-                                  <img src="https://i.ibb.co/y5LvZZ7/article.jpg" alt="article" border="0" width="87%" height="auto" style=" border-radius: 10px; "/>
-                                </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="background-color: #f8f4bc;max-width:500px; mso-padding-left-alt: 40px;  mso-padding-right-alt: 40px;  mso-padding-top-alt: 20px;  " width="600" >
-                              <p align="left" style="font-size: 20px;font-family: Poppins, Arial, serif; text-transform:uppercase; font-weight: bold; align-items: left; color: #000000; margin-bottom: 18px; overflow: hidden;padding-bottom: 10px; line-height: 30px;padding-left:40px;padding-right:40px;">How to Create Awesome NFTs with MidJourney</p>
-                                   
-                              <p align="left" class="article-text" style="word-wrap: break-word; font-family: Poppins,Arial, serif; align-items: left; font-size: 14px; color: #000000; letter-spacing: 1.5px; list-style: none; line-height: 1.7; padding-bottom: 10px; padding-left:40px;padding-right:40px;">Non-fungible tokens (NFTs) are changing the way we think about digital art, collectibles, and other unique digital assets. The use of NFTs allows for the creation of one-of-a-kind items that can be bought, sold, and traded just like physical objects.</p>
-                          
-                              <p align="left" class="article-text" style="word-wrap: break-word; font-family: 'Poppins',Arial, serif; align-items: left; font-size: 14px; color: #000000; letter-spacing: 1.5px; list-style: none; line-height: 1.5; padding-bottom: 10px;padding-left:40px;padding-right:40px;">Midjourney is a platform that allows you to easily create, manage, and sell NFTs. With its user-friendly interface, anyone can create stunning NFTs without...</p>
-                          
-                              <a href="#" style="text-decoration: none;">
-                                <p align="left" style="word-wrap: break-word; font-family: 'Poppins', Arial, serif; align-items: left; font-size: 14px; color: #000000; letter-spacing: 1.5px; list-style: none; line-height: 1.3; padding-left: 2px; padding-bottom: 10px; padding-left:40px;padding-right:40px;font-weight: bold;">
-                                Read more...
-                                </p>
-                              </a>
-                
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="left" style="background-color: #f8f4bc;" >
-                              <table width="100%" align="left" bgcolor="#f8f4bc" role="presentation" width="600" style="background-color: #f8f4bc;max-width:100%;">
+                            <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                        <![endif]-->
+                      <table
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="100%"
+                        class="responsive-table"
+                      >
+                        <tr>
+                          <td bgcolor="ffffff">
+                            <img
+                              class="image"
+                              src="https://i.ibb.co/cC0yMDN/trending-1.jpg"
+                              alt="trending-collection-1"
+                              width="260"
+                              height="auto"
+                              style="display: block; border: none"
+                            />
+                            <p
+                              class="mobile-copy card-details"
+                              style="
+                                background-color: #ffffff;
+                                mso-shading: #ffffff;
+                                font-family: Poppins, Arial, serif;
+                                text-align: center;
+                                color: black;
+                                margin-bottom: 18px;
+                                overflow: hidden;
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                              "
+                            >
+                              Kuntash #321
+                            </p>
+                            <!--[if (gte mso 9) | (IE)]>
+                              <table width="100%" style="border-spacing: 0;" 
+                              bgcolor="#fff" style="background-color:#fff;role="presentation">
                                 <tr>
-                                  <td  align="left" width="50" style="display: inline-block; background-color: #f8f4bc; padding-left:40px; max-width: 100%;">
-                                    <img width="45" height="45"  style="border-radius: 50%; align-items: center; vertical-align: center;"src="https://i.ibb.co/Q8Z8hC6/profile-icon.jpg" alt="profile-icon" border="0">
+                                <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                              <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              width="100%"
+                              class="responsive-table"
+                            >
+                              <tr>
+                                <td
+                                  width="110"
+                                  align="center"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    Floor
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                    "
+                                  >
+                                    12.0 ETH
+                                  </p>
+                                </td>
+                                <!--[if mso]>
                                   </td>
-                                  <td style="display: inline-block; padding-left: 10px;background-color: #f8f4bc; ">
-                                  <p  align="left" style="font-family: Poppins, Arial, serif; text-transform:uppercase; align-items: left;  vertical-align:middle; font-size: 9px; text-align: left; font-style: italic; ">by William F. Guile</p>
+                                  <td style="width:50%;" valign="top">
+                                <![endif]-->
+                                <td width="10" height="20" class="dw db spacer">
+                                  &nbsp;
+                                </td>
+                                <td
+                                  width="110"
+                                  style="max-width: 100%"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    Volume
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    249 ETH
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--[if (gte mso 9) | (IE)]>
                                   </td>
                                 </tr>
                               </table>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if (gte mso 9) | (IE)]>
                             </td>
-                          </tr>
-                          <tr>
-                            <td width="600" style="max-width:100%;mso-padding-left-alt: 40px;  mso-padding-right-alt: 40px; mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px;">
-                              <p align="left" style="font-family: 'Poppins', Arial, serif; align-items: left; font-size: 12px; font-weight: 500; color: #000000; text-transform: uppercase; display: block; letter-spacing: 1px; padding-bottom: 10px;padding-top: 8px; padding-left:40px;padding-right:40px;">February 15th, 2023
-                              </p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td width="600" style="background-color: #f8f4bc;" height="10"></td>
                           </tr>
                         </table>
-                      </td>
-                    </tr>
-                  </table>     -->
+                      <![endif]-->
+                    </td>
+                    <!-- END OF 1st Product Card -->
 
-              <!-- single column footer -->
-              <table
-                width="100%"
-                class="footer"
-                bgcolor="#2081E2"
-                width="600"
-                align="left"
-                border="0"
-                cellpadding="0"
-                cellspacing="0"
-                role="presentation"
-              >
-                <tr>
-                  <td
-                    width="600"
-                    style="line-height: 2px; padding-top: 20px; max-width: 100%"
-                  >
-                    <table
-                      bgcolor="#2081E2"
-                      align="left"
-                      border="0"
-                      cellpadding="0"
-                      cellspacing="0"
-                      role="presentation"
-                      style="background-color: #2081e2"
-                    >
-                      <tr>
-                        <td
-                          style="
-                            max-width: 100%;
-                            display: block;
-                            background-color: #2081e2;
-                            mso-padding-left-alt: 40px;
-                            mso-line-height-alt: 68px;
-                            mso-padding-top-alt: 20px;
-                            mso-line-height-rule: exactly;
-                            line-height: 1.6;
-                          "
-                          height="auto"
-                        >
-                          <a href="#">
+                    <td width="20" height="20" class="dw db">&nbsp;</td>
+
+                    <td width="260" class="dw db">
+                      <!--[if (gte mso 9) | (IE)]>
+                        <table width="100%" style="border-spacing: 0;" 
+                        bgcolor="#f4fdf4" style="background-color:#f4fdf4;role="presentation">
+                          <tr>
+                            <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                        <![endif]-->
+                      <table
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="100%"
+                        class="responsive-table"
+                      >
+                        <tr>
+                          <td bgcolor="ffffff">
                             <img
-                              class="icon-image"
-                              src="https://i.ibb.co/48yvFvy/footer-logo.png"
-                              alt="8bit logo"
-                              width="120"
+                              class="image"
+                              src="https://i.ibb.co/8gLQ777/trending-2.jpg"
+                              alt="trending-collection-2"
+                              width="260"
                               height="auto"
-                              style="display: block; margin-left: 40px"
+                              style="display: block; border: none"
                             />
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          width="600"
-                          style="
-                            background-color: #2081e2;
-                            max-width: 100%;
-                            line-height: 22px;
-                            mso-padding-left-alt: 40px;
-                          "
-                        >
-                          <table
-                            align="left"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                            style="padding-left: 40px; padding-top: 10px"
-                          >
-                            <tr>
-                              <td style="padding-right: 5px">
-                                <a
-                                  href="https://www.facebook.com"
-                                  target="_blank"
-                                  style="
-                                    text-decoration: none;
-                                    color: #ffffff;
-                                    margin-right: 5px;
-                                    mso-padding-right-alt: 5px;
-                                  "
-                                >
-                                  <img
-                                    src="https://i.ibb.co/5RqFZgh/facebook-white.png"
-                                    class="icons"
-                                    alt="facebook-white"
-                                    border="0"
-                                    width="26"
-                                    height="auto"
-                                    style="mso-padding-right-alt: 5px"
-                                  />
-                                </a>
-                              </td>
-                              <td style="padding-right: 5px">
-                                <a
-                                  href="https://www.twitter.com"
-                                  target="_blank"
-                                  style="
-                                    text-decoration: none;
-                                    color: #ffffff;
-                                    margin-right: 5px;
-                                    mso-padding-right-alt: 5px;
-                                  "
-                                >
-                                  <img
-                                    src="https://i.ibb.co/q1rMNtZ/twitter-white.png"
-                                    class="icons"
-                                    alt="twitter-white"
-                                    border="0"
-                                    width="26"
-                                    height="auto"
-                                    style="mso-padding-right-alt: 5px"
-                                  />
-                                </a>
-                              </td>
-                              <td style="padding-right: 5px">
-                                <a
-                                  href="https://www.linkedin.com"
-                                  target="_blank"
-                                  style="
-                                    text-decoration: none;
-                                    color: #ffffff;
-                                    margin-right: 5px;
-                                    mso-padding-right-alt: 5px;
-                                  "
-                                >
-                                  <img
-                                    src="https://i.ibb.co/v17RjPz/linkedin-white.png"
-                                    class="icons"
-                                    alt="linkedin-white"
-                                    border="0"
-                                    width="26"
-                                    height="auto"
-                                    style="mso-padding-right-alt: 5px"
-                                  />
-                                </a>
-                              </td>
-                              <td style="padding-right: 5px">
-                                <a
-                                  href="https://www.youtube.com"
-                                  target="_blank"
-                                  style="
-                                    text-decoration: none;
-                                    color: #ffffff;
-                                    margin-right: 5px;
-                                    mso-padding-right-alt: 5px;
-                                  "
-                                >
-                                  <img
-                                    src="https://i.ibb.co/rs2PVxv/youtube-white.png"
-                                    class="icons"
-                                    alt="youtube-white"
-                                    border="0"
-                                    width="26"
-                                    height="auto"
-                                    style="mso-padding-right-alt: 5px"
-                                  />
-                                </a>
-                              </td>
-                              <td style="padding-right: 5px">
-                                <a
-                                  href="https://www.instagram.com"
-                                  target="_blank"
-                                  style="
-                                    text-decoration: none;
-                                    color: #ffffff;
-                                    margin-right: 5px;
-                                    mso-padding-right-alt: 5px;
-                                  "
-                                >
-                                  <img
-                                    src="https://i.ibb.co/xjKKjX5/instagram-white.png"
-                                    class="icons"
-                                    alt="instagram-white"
-                                    border="0"
-                                    width="26"
-                                    height="auto"
-                                    style="mso-padding-right-alt: 5px"
-                                  />
-                                </a>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          bgcolor="#2081E2"
-                          style="
-                            padding-left: 40px;
-                            max-width: 100%;
-                            background-color: #2081e2;
-                            margin-bottom: 5px;
-                            max-width: 100%;
-                            padding-top: 10px;
-                          "
-                        >
-                          <p
-                            style="
-                              display: block;
-                              text-align: left;
-                              font-size: 10px;
-                              mso-line-height-rule: exactly;
-                              font-family: Poppins, Arial, serif;
-                              color: #ffffff;
-                            "
-                          >
-                            <a
-                              href="#"
-                              target="_blank"
+                            <p
+                              class="mobile-copy card-details"
                               style="
-                                text-decoration: none;
-                                color: #ffffff;
-                                margin-right: 10px;
-                                mso-margin-right-alt: 10px;
+                                background-color: #ffffff;
+                                mso-shading: #ffffff;
+                                font-family: Poppins, Arial, serif;
+                                text-align: center;
+                                color: black;
+                                margin-bottom: 18px;
+                                overflow: hidden;
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-transform: uppercase;
                               "
-                              >Privacy Policy</a
                             >
-                            <a
-                              href="#"
-                              target="_blank"
-                              style="text-decoration: none; color: #ffffff"
+                              OutaTime #1025
+                            </p>
+                            <!--[if (gte mso 9) | (IE)]>
+                              <table width="100%" style="border-spacing: 0;" 
+                              bgcolor="#fff" style="background-color:#fff;role="presentation">
+                                <tr>
+                                <td width="50%" padding: 10px; valign="top" style:"padding: 0;">
+                              <![endif]-->
+                            <table
+                              align="center"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              role="presentation"
+                              width="100%"
+                              class="responsive-table"
                             >
-                              Unsubscribe</a
-                            >
-                          </p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          bgcolor="#2081E2"
-                          style="
-                            display: block;
-                            margin-top: 20px;
-                            padding-left: 40px;
-                            background-color: #2081e2;
-                            mso-padding-bottom-alt: 20px;
-                            mso-padding-top-alt: 10px;
-                          "
-                        >
-                          <p
-                            style="
-                              mso-line-height-rule: exactly;
-                              text-align: left;
-                              font-size: 12px;
-                              font-family: Poppins, Arial, serif;
-                              color: #ffffff;
-                              margin-top: 0px;
-                              padding-bottom: 10px;
-                              mso-shading: #2081e2;
-                            "
-                          >
-                            <a
-                              href="#"
-                              target="_blank"
-                              style="
-                                text-decoration: none;
-                                color: #ffffff;
-                                margin-right: 10px;
-                              "
-                              >&#169;2023
-                              <span
-                                style="
-                                  margin-left: 10px;
-                                  mso-margin-left-alt: 10px;
-                                "
-                                >8-Bit Inc.</span
-                              ></a
-                            >
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- single footer v2 -->
-              <!-- single column footer -->
-              <!--              <table  width="600" align="center" style="display:block" border="0" cellpadding="0" cellspacing="0" role="presentation">
-                      <tr>
-                        <td style="mso-padding-top-alt: 10px;line-height:2px">
-                           <table  bgcolor="#2081E2" width="100%" lign="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #2081E2; ">
-                            <tr>
-                              <td style="max-width:100%;display:block;background-color: #2081E2; mso-line-height-alt:68px;mso-padding-top-alt: 10px; mso-padding-left-alt: 40px;mso-line-height-rule: exactly; line-height:1.6;" height="48" width="600">
-                                <a href="#">
-                                  <img src="https://i.ibb.co/48yvFvy/footer-logo.png" alt="8bit logo" width="120" height="48"  style="display:block;margin-left:40px;">
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td  style="background-color:#2081E2; max-width: 100%;line-height:22px; mso-padding-bottom-alt: 10px;">
-                                <p align="left" style="line-height:1.4;text-align: left; font-size: 12px; font-family: Roboto, Arial; color: #ffffff;margin-bottom: 2px;margin-left: 40px;"> 
-                                <a href="https://www.facebook.com" target="_blank" style="text-decoration: none; color: #ffffff;margin-right: 5px;">
-                                  <img src="https://i.ibb.co/5RqFZgh/facebook-white.png" class="icons" alt="facebook-white" border="0" width="26" height="auto">
-                                </a>
-                                <a href="https://www.twitter.com" target="_blank" style="text-decoration: none; color: #ffffff;margin-right: 5px;">
-                                  <img src="https://i.ibb.co/q1rMNtZ/twitter-white.png" class="icons" alt="twitter-white" border="0" width="26" height="auto">
-                                </a>
-                                <a href="https://www.linkedin.com" target="_blank" style="text-decoration: none; color: #ffffff;margin-right: 5px;">
-                                  <img src="https://i.ibb.co/v17RjPz/linkedin-white.png" class="icons" alt="linkedin-white" border="0" width="26" height="auto">
-                                </a>
-                                <a href="https://www.youtube.com" target="_blank" style="text-decoration: none; color: #ffffff;margin-right: 5px;">
-                                  <img src="https://i.ibb.co/rs2PVxv/youtube-white.png" class="icons" alt="youtube-white" width="26" height="auto">
-                                </a>
-                                <a href="https://www.instagram.com" target="_blank" style="text-decoration: none; color: #ffffff;">
-                                  <img src="https://i.ibb.co/xjKKjX5/instagram-white.png" class="icons" alt="facebook-white" border="0" width="26" height="auto">
-                                </a>
-                                </p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td  bgcolor="#2081E2" style="padding-left: 40px;max-width:100%; background-color: #2081E2;;margin-bottom: 5px;max-width:100%;">
-                                <p style=" display: block;text-align: left; font-size: 10px; ;mso-line-height-rule:exactly; font-family: Poppins, Arial, serif; color: #ffffff;"> 
-                                  <a href="#" target="_blank" style="text-decoration: underline; color: #ffffff;margin-right: 10px;mso-margin-right-alt:10px;">Privacy Policy</a>  
-                                  <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;text-decoration: underline;">  Unsubscribe</a>
-                                </p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td bgcolor="#2081E2" style="display:block;margin-top: 20px;padding-left: 40px;background-color: #2081E2;mso-padding-bottom-alt:10px;mso-padding-top-alt:10px;">
-                                <p style="mso-line-height-rule:exactly; text-align: left; font-size: 12px; font-family: Poppins, Arial, serif; color: #ffffff;margin-top: 0px;padding-bottom: 10px;mso-shading: #2081E2"> 
-                                  <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;margin-right: 10px;">&#169;2023 <span style="margin-left: 10px;mso-margin-left-alt:10px;">8-Bit  Inc.</span></a>  
-                                </p>
-                              </td>
-                            </tr>
+                              <tr>
+                                <td
+                                  width="110"
+                                  align="center"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                    "
+                                  >
+                                    Floor
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                    "
+                                  >
+                                    8.7 ETH
+                                  </p>
+                                </td>
+                                <!--[if mso]>
+                                  </td>
+                                  <td style="width:50%;" valign="top">
+                                <![endif]-->
+                                <td width="10" height="20" class="dw db spacer">
+                                  &nbsp;
+                                </td>
+                                <td
+                                  width="110"
+                                  style="max-width: 100%"
+                                  class="inner-table-cell"
+                                >
+                                  <p
+                                    class="mobile-copy card-details"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      text-transform: uppercase;
+                                      font-size: 16px;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    Volume
+                                  </p>
+                                  <p
+                                    class="mobile-copy card-details"
+                                    align="center"
+                                    style="
+                                      font-family: Poppins, Arial, serif;
+                                      text-align: center;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      color: black;
+                                      max-width: 100%;
+                                    "
+                                  >
+                                    135 ETH
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                            <!--[if (gte mso 9) | (IE)]>
+                                  </td>
+                                </tr>
+                              </table>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                      <!--[if (gte mso 9) | (IE)]>
+                            </td>
+                          </tr>
                         </table>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF 2nd TWO COLUMN NFT -->
+
+            <!-- WHITE SPACE -->
+            <tr>
+              <td bgcolor="#f4fdf4" style="background-color: #f4fdf4">
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #f4fdf4"
+                >
+                  <tr>
+                    <td width="100%" height="60px">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- WHITE SPACE -->
+
+            <!-- START OF UPCOMING EVENTS TEXT -->
+            <tr>
+              <td
+                align="left"
+                style="
+                  padding-bottom: 10px;
+                  background-color: #ddefff;
+                  padding-left: 40px;
+                "
+                class="padding-left padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" width="100%" style="display: block">
+                      <p
+                        style="
+                          width: 100%;
+                          margin-bottom: 10px;
+                          font-size: 30px;
+                          font-weight: bold;
+                          text-align: left;
+                          font-family: Poppins, Arial, serif;
+                          color: #302f2f;
+                          text-transform: uppercase;
+                        "
+                        class="mobile-title"
+                      >
+                        Upcoming Events
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF UPCOMING EVENTS TEXT -->
+
+            <!-- START OF UPCOMING EVENTS DETAILS -->
+            <tr>
+              <td
+                align="center"
+                style="padding-bottom: 10px; background-color: #ddefff"
+                class="padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #ddefff"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      class="responsive-image"
+                      align="center"
+                      width="100%"
+                      style="display: block"
+                    >
+                      <a href="#">
+                        <img
+                          src="https://i.ibb.co/7y2dTH6/upcoming-1.jpg"
+                          alt="upcoming-1"
+                          border="0"
+                          width="88%"
+                          height="auto"
+                          style="
+                            border-radius: 10px;
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                              rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="padding-left"
+                      align="left"
+                      style="
+                        align-items: left;
+                        text-align: left;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                      "
+                      width="90%"
+                    >
+                      <a href="#" target="_blank" style="text-decoration: none">
+                        <p
+                          style="
+                            font-family: Poppins, Arial, sans-serif;
+                            text-align: left;
+                            align-items: left;
+                            color: black;
+                            font-weight: bold;
+                            overflow: hidden;
+                            text-transform: uppercase;
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 25px;
+                          "
+                        >
+                          NFT Paris
+                        </p>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="padding-left"
+                      align="left"
+                      style="
+                        margin-top: 3px;
+                        padding-bottom: 20px;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        max-width: 500px;
+                      "
+                      width="600"
+                    >
+                      <p
+                        class="mobile-copy"
+                        style="
+                          word-wrap: break-word;
+                          font-family: 'Poppins';
+                          align-items: left;
+                          font-size: 16px;
+                          color: #3f3f3f;
+                          letter-spacing: 0.5px;
+                          list-style: none;
+                          line-height: 1.5;
+                          padding-bottom: 10px;
+                          text-align: left;
+                        "
+                      >
+                        NFT Paris will feature speakers from top Web3 companies
+                        and offer attendees the chance to learn from industry
+                        experts and network with other leaders.
+                      </p>
+                      <p
+                        class="mobile-copy"
+                        style="
+                          font-family: Poppins, Arial, sans-serif;
+                          font-weight: bold;
+                          align-items: left;
+                          font-size: 14px;
+                          letter-spacing: 2px;
+                        "
+                      >
+                        Feb 23-24th
+                      </p>
+                      <p
+                        class="mobile-copy"
+                        style="
+                          font-family: Poppins, Arial, sans-serif;
+                          font-weight: bold;
+                          align-items: left;
+                          font-size: 14px;
+                          letter-spacing: 2px;
+                          line-height: 30px;
+                        "
+                      >
+                        The Grand Palais, Paris
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF UPCOMING EVENTS DETAILS -->
+
+            <!-- START OF LATEST ARTICLE HEADING -->
+            <tr>
+              <td
+                align="left"
+                style="
+                  padding-bottom: 10px;
+                  background-color: #f8f4bc;
+                  padding-left: 40px;
+                "
+                class="padding-left padding-bottom"
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" width="100%" style="display: block">
+                      <p
+                        style="
+                          width: 100%;
+                          margin-bottom: 10px;
+                          font-size: 30px;
+                          font-weight: bold;
+                          text-align: left;
+                          font-family: Poppins, Arial, serif;
+                          color: #302f2f;
+                          text-transform: uppercase;
+                        "
+                        class="mobile-title"
+                      >
+                        Latest Article
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF LATEST ARTICLE HEADING -->
+
+            <!-- START OF LATEST ARTICLE DETAILS -->
+            <tr>
+              <td
+                align="center"
+                style=" background-color: #f8f4bc"
+             
+              >
+                <table
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                  style="background-color: #f8f4bc"
+                >
+                  <tr>
+                    <td
+                      align="center"
+                      class="responsive-image"
+                      align="center"
+                      width="100%"
+                      style="display: block"
+                    >
+                      <a href="#">
+                        <img
+                          src="https://i.ibb.co/y5LvZZ7/article.jpg"
+                          alt="upcoming-1"
+                          border="0"
+                          width="88%"
+                          height="auto"
+                          style="
+                            border-radius: 10px;
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                              rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="padding-left"
+                      align="left"
+                      style="
+                        align-items: left;
+                        text-align: left;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                      "
+                      width="90%"
+                    >
+                      <a href="#" target="_blank" style="text-decoration: none">
+                        <p
+                          style="
+                            font-family: Poppins, Arial, sans-serif;
+                            text-align: left;
+                            align-items: left;
+                            color: black;
+                            font-weight: bold;
+                            overflow: hidden;
+                            text-transform: uppercase;
+                            font-size: 22px;
+                            margin: 0;
+                            padding-top: 25px;
+                          "
+                        >
+                          How to Create Awesome NFTs with MidJourney
+                        </p>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="padding-left"
+                      align="left"
+                      style="
+                        margin-top: 3px;
+                        padding-bottom: 20px;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        max-width: 500px;
+                      "
+                      width="600"
+                    >
+                      <p
+                        class="mobile-copy"
+                        style="
+                          word-wrap: break-word;
+                          font-family: 'Poppins';
+                          align-items: left;
+                          font-size: 16px;
+                          color: #3f3f3f;
+                          letter-spacing: 0.5px;
+                          list-style: none;
+                          line-height: 1.5;
+                          padding-bottom: 10px;
+                          text-align: left;
+                        "
+                      >
+                        Non-fungible tokens (NFTs) are changing the way we think
+                        about digital art, collectibles, and other unique
+                        digital assets. The use of NFTs allows for the creation
+                        of one-of-a-kind items that can be bought, sold, and
+                        traded just like physical objects.
+                      </p>
+                      <a style="color: black">
+                        <p
+                          class="mobile-copy"
+                          style="
+                            font-family: Poppins, Arial, sans-serif;
+                            font-weight: bold;
+                            align-items: left;
+                            font-size: 14px;
+                            letter-spacing: 2px;
+                            text-decoration: none;
+                          "
+                        >
+                          Read More...
+                        </p>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="left" style="background-color: #f8f4bc">
+                      <table
+                        width="100%"
+                        align="left"
+                        bgcolor="#f8f4bc"
+                        role="presentation"
+                        width="600"
+                        style="background-color: #f8f4bc; max-width: 100%"
+                      >
+                        <tr>
+                          <td
+                          class="padding-left"
+                            align="left"
+                            width="50"
+                            style="
+                              display: inline-block;
+                              background-color: #f8f4bc;
+                              padding-left: 40px;
+                              max-width: 100%;
+                            "
+                          >
+                            <img
+                              width="45"
+                              height="45"
+                              style="
+                                border-radius: 50%;
+                                align-items: center;
+                                vertical-align: center;
+                              "
+                              src="https://i.ibb.co/Q8Z8hC6/profile-icon.jpg"
+                              alt="profile-icon"
+                              border="0"
+                            />
+                          </td>
+                          <td
+                            style="
+                              display: inline-block;
+                              padding-left: 10px;
+                              background-color: #f8f4bc;
+                            "
+                          >
+                            <p
+                              align="left"
+                              style="
+                                font-family: Poppins, Arial, serif;
+                                text-transform: uppercase;
+                                align-items: left;
+                                vertical-align: middle;
+                                font-size: 9px;
+                                text-align: left;
+                                font-style: italic;
+                              "
+                            >
+                              by William F. Guile
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            width="600"
+                            style="
+                              max-width: 100%;
+                              mso-padding-left-alt: 40px;
+                              mso-padding-right-alt: 40px;
+                              mso-padding-top-alt: 20px;
+                              mso-padding-bottom-alt: 20px;
+                            "
+                          >
+                            <p
+                            class="padding-left"
+                              align="left"
+                              style="
+                                font-family: 'Poppins', Arial, serif;
+                                align-items: left;
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: #000000;
+                                text-transform: uppercase;
+                                display: block;
+                                letter-spacing: 1px;
+                                padding-bottom: 10px;
+                                padding-top: 8px;
+                                padding-left: 40px;
+                                padding-right: 40px;
+                              "
+                            >
+                              February 15th, 2023
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            width="600"
+                            style="background-color: #f8f4bc"
+                            height="10"
+                          ></td>
+                        </tr>
+                    </table>
                   </td>
                 </tr>
-              </table>
-                         -->
+            <!-- END OF LATEST ARTICLE DETAILS -->
 
-              <!--[if mso]>
-                    </tr>
-                    </td>  
-                    </table>
-                  <![endif]-->
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+            <!-- START OF FOOTER LOGO -->
+            <tr>
+              <td align="left" style="background-color: #2081E2;padding-top: 20px; padding-bottom: 10px;">
+                <table
+                  align="left"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="60%"
+                >
+                  <tr>
+                    <td  width="100%"  align="left" style="display: block;
+                    background-color: #2081e2;
+                    mso-padding-left-alt: 40px;
+                    mso-line-height-alt: 68px;
+                    mso-padding-top-alt: 20px;
+                    mso-line-height-rule: exactly;
+                 
+                    ">
+                        <a href="#">
+                          <img
+                          
+                            src="https://i.ibb.co/48yvFvy/footer-logo.png"
+                            alt="8bit logo"
+                            width="120"
+                            height="auto"
+                            style="display: block; margin-left: 40px"
+                            class="footer-padding-left"
+                          />
+                        </a>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF FOOTER LOGO -->
+
+            <!-- START OF SOCIAL ICONS -->
+            <tr>
+              <td align="left" style="background-color: #2081E2;">
+                <table
+                  align="left"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td align="left" style="padding: 0px; ">
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="40%"
+                        class="footer-padding-left" 
+                        style="margin-left:33px;mso-padding-left-alt: 33px;"
+                      >
+                        <tr>
+                          <td align="center" >
+                            <a href="https://www.facebook.com" target="_blank" style="
+                            text-decoration: none;
+                
+                            margin-right: 5px;
+                            mso-padding-right-alt: 5px;
+                          ">
+                              <img
+                                class="mobile-links-image"
+                                src="https://i.ibb.co/5RqFZgh/facebook-white.png"
+                                alt="Facebook"
+                                width="30"
+                                height="auto"
+                                style="display: inline-block; border: none"
+                              />
+                            </a>
+                          </td>
+
+                          <td align="center">
+                            <a href="https://www.linkedin.com" target="_blank" style="
+                            text-decoration: none;
+                         
+                            margin-right: 5px;
+                            mso-padding-right-alt: 5px;
+                          ">
+                              <img
+                                class="mobile-links-image"
+                                src="https://i.ibb.co/v17RjPz/linkedin-white.png"
+                                alt="Linkedin"
+                                width="30"
+                                height="auto"
+                                style="display: inline-block; border: none"
+                              />
+                            </a>
+                          </td>
+
+                          <td align="center">
+                            <a href="https://www.youtube.com" target="_blank" style="
+                            text-decoration: none;
+                        
+                            margin-right: 5px;
+                            mso-padding-right-alt: 5px;
+                          ">
+                              <img
+                                class="mobile-links-image"
+                                src="https://i.ibb.co/rs2PVxv/youtube-white.png"
+                                alt="Youtube"
+                                width="30"
+                                height="auto"
+                                style="display: inline-block; border: none"
+                              />
+                            </a>
+                          </td>
+
+                          <td align="center">
+                            <a href="https://www.facebook.com" target="_blank" style="
+                            text-decoration: none;
+                            margin-right: 5px;
+                            mso-padding-right-alt: 5px;
+                          ">
+                              <img
+                                class="mobile-links-image"
+                                src="https://i.ibb.co/q1rMNtZ/twitter-white.png"
+                                alt="Twitter"
+                                width="30"
+                                height="auto"
+                                style="display: inline-block; border: none"
+                              />
+                            </a>
+                          </td>
+
+                          <td align="center">
+                            <a href="https://www.instagram.com" target="_blank" style="
+                            text-decoration: none;
+                            margin-right: 5px;
+                            mso-padding-right-alt: 5px;
+                          ">
+                              <img
+                                class="mobile-links-image"
+                                src="https://i.ibb.co/xjKKjX5/instagram-white.png"
+                                alt="Instagram"
+                                width="30"
+                                height="auto"
+                                style="display: inline-block; border: none"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF OF SOCIAL ICONS -->
+
+    
+
+            <!-- START OF PRIVACY AND UNSUBSCRIBE  -->
+            <tr>
+              <td align="left" style="background-color: #2081E2;padding-top: 10px; ">
+                <table
+                  align="left"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="60%"
+                >
+                  <tr>
+                    <td  width="100%" class="footer-padding-left" align="left" style="display: block;
+                    background-color: #2081e2;
+                    mso-padding-left-alt: 40px;
+                    mso-line-height-alt: 68px;
+                    mso-padding-top-alt: 20px;
+                    mso-line-height-rule: exactly;
+                    margin-left: 47px;
+                 
+                    ">
+                    <p
+                    
+                    style="
+                      display: block;
+                      text-align: left;
+                      font-size: 10px;
+                      mso-line-height-rule: exactly;
+                      font-family: Poppins, Arial, serif;
+                      color: #ffffff;
+                    "
+                  >
+                    <a
+                      href="#"
+                      target="_blank"
+                      style="
+                        text-decoration: none;
+                        color: #ffffff;
+                        margin-right: 10px;
+                        mso-margin-right-alt: 10px;
+                      "
+                      >Privacy Policy
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      style="text-decoration: none; color: #ffffff"
+                    >
+                      Unsubscribe</a
+                    >
+                  </p>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF PRIVACY AND UNSUBSCRIBE  -->
+
+
+            <!-- START OF COPYRIGHT  -->
+            <tr>
+              <td align="left" style="background-color: #2081E2; padding-bottom: 10px;">
+                <table
+                  align="left"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="60%"
+                >
+                  <tr>
+                    <td  width="100%" class="footer-padding-left" align="left" style="display: block;
+                    background-color: #2081e2;
+                    mso-padding-left-alt: 40px;
+                    mso-line-height-alt: 68px;
+                    mso-padding-top-alt: 20px;
+                    mso-line-height-rule: exactly;
+                    margin-left: 47px;
+                 
+                    ">
+                    <p
+                    
+                    style="
+                      display: block;
+                      text-align: left;
+                      font-size: 12px;
+                      mso-line-height-rule: exactly;
+                      font-family: Poppins, Arial, serif;
+                      color: #ffffff;
+                    "
+                  >
+                    <a
+                      href="#"
+                      target="_blank"
+                      style="
+                        text-decoration: none;
+                        color: #ffffff;
+                        margin-right: 5px;
+                        mso-margin-right-alt: 10px;
+                      "
+                      >&#169;2024
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                      style="text-decoration: none; color: #ffffff"
+                    >
+                    <span
+                    style="
+                      margin-left: 5px;
+                      mso-margin-left-alt: 10px;
+                    "
+                    >8-Bit Inc.</span
+                  >
+                      </a>
+                  </p>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- END OF COPYRIGHT -->  
+
+          </table>
+          <!-- END OF HTML EMAIL (600PX WIDE) -->
+          <!--[if (gte mso 9 | (IE)]>
+              </td>
+            </tr>
+          </table>
+        <![endif]-->
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
-
-<!-- two column product row #1 -->
-<!--     <div align="center" class="two-col" style="text-align: center; font-size:0; vertical-align:top; padding-top: 45px;padding-bottom: 10px;"> font size 0 so that column can sit side by side
-                    [if mso]>
-                      <table role="presentation" width="100%">
-                      <tr>
-                      <td style="width:50%; padding: 10px;" valign="middle">
-                    <![endif]
-                    <div width="260" class="column" style=" max-width: 260px; display:inline-block; vertical-align:top;margin-right:5px;">
-                      <div style="width:100%; line-height:14px; text-align: center; ">
-                          <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/6HxfvHd/model-3-resized.jpg" width="240" height="auto" alt="model 3">
-                          </a>
-                          <p style="color: #000000;font-size: 15px; text-align: center;font-family: Raleway, serif;  line-height: 20px;">100% Linen Trapeze <br>Midi Dress
-                           </p>
-                           <p style="color: #000000;font-size: 15px; text-align: center;font-family: sans-serif; font-weight: bold;">$70.00
-                          </p>
-                      </div>
-                    </div>      
-                    [if mso]>
-                      </td>
-                      <td style="width:50%;padding: 10px;" valign="middle">
-                    <![endif]
-                    <div width="260" class="column" style=" max-width: 260px; display:inline-block; vertical-align:top;margin-left:5px;">
-                      <div style="width:100%; line-height:14px; text-align: center; ">
-                          <a href="#" target="_blank">
-                            <img src="https://i.ibb.co/QnWPNRw/model-2-resized.jpg" width="240" height="auto" alt="model 3">
-                          </a>
-                          <p style="color: #000000;font-size: 15px; text-align: center;font-family: Raleway, serif;  line-height: 20px;">100% Linen Trapeze <br>Midi Short Sleeve Dress
-                           </p>
-                           <p style="color: #000000;font-size: 15px; text-align: center;font-family: sans-serif; font-weight: bold;">$60.00
-                          </p>
-                      </div>
-                    </div>     
-                    [if mso]>
-                    </td>
-                    </tr>
-                    </table>
-                  <![endif]
-                  </div> -->
